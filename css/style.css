@@ -1,0 +1,139 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 0.3fr;
+}
+main{
+    height: 100%;
+}
+.container{
+    height: 100%;
+    margin-top: 5%;
+}
+.caja-Uno{
+    background-image: url(../img/nubes.jpeg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.data-clima{
+    width: 50%;
+    display: flex;
+   flex-direction: column;
+   height: 100%;
+   justify-content: center;
+}
+.caja-Dos{
+    width: 25%;
+    opacity: 50%;
+    background-color: white;
+    height: 100%;
+}
+.title{
+    color: white;
+    font-size: 3em;
+    margin: 5%;
+}
+.info-location{
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    flex-direction: row;
+    height: 10%;
+    border-bottom-style: inset;
+    justify-content: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.location h2{
+    color: white;
+    font-size: 1em;
+}
+.img-loc{
+    width: 50px;
+    color: white;
+}
+.time{
+    height: 100%;
+}
+.grados{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.img-grado{
+    width: 100px;
+}
+.info-clima{
+    /* width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+.info{
+    /* width: 150px;
+    height: 100px;
+    background-color: white;
+    opacity: 70%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+.next-day{
+    width: 100%;
+    height: 100px;
+    background-color: wheat;
+}
+.infoTime{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.result{
+    width: 100%;
+    /* height: 50%; */
+}
+.result h5{
+    color: white;
+    font-size: 5em;
+
+}
+.result h2{
+    color: white;
+    font-size: 3em;  
+}
+.result p{
+    color: white;
+    font-size: 2em;  
+}
+.caja-resul{
+    height: 100%;
+    background-color: black;
+    opacity: 40%;
+    width: 50%;
+}
+
+.inp-city{
+    background-color: transparent;
+    margin-top: 5%;
+    border: none;
+}
+.inp-icon{
+    background-color: transparent;
+    border: none;
+    margin-top: 5%;
+    background: url('https://api.iconify.design/bx/search.svg?color=white&width=50&height=50');
+    height: 100%;
+    background-repeat: no-repeat;
+    color: transparent;
+}
