@@ -173,7 +173,9 @@ main{
     width: 100%;
     font-family: 'Roboto', sans-serif
 }
-
+footer{
+    background-color: black;
+}
 /* mediasquerys*/
 @media only screen and (max-width:1500px){
 

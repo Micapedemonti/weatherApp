@@ -1,6 +1,8 @@
 // window.addEventListener('load', ()=> {
 //     let lon
 //     let lat
+    let presion=document.querySelector('.presAtm')
+    let sensacion=document.querySelector('.senTermica')
     let viento=document.querySelector('.viento')
     let humedad=document.querySelector('.humedad')
     let infoClima=document.querySelector('.infoClima')
@@ -14,6 +16,7 @@
 
     // })    
     
+    
     form.addEventListener('submit',(e)=>{
         e.preventDefault()
         if (ubicacion.value === ''){
@@ -22,6 +25,9 @@
         }
 
         llamarApi(ubicacion.value);
+    })
+    form.addEventListener('submit',(e)=>{
+       bgTemp()
     })
     function llamarApi(city){
         // const apiKey= "be454d68474e61c070edc0083e4b91a0"
@@ -39,8 +45,18 @@
             }
           })
     }
+
+//     function bgTemp(tem){
+//         const {main:{temp}}=tem
+//         if ( temp  > "4" ){
+//         alert("hace calor")
+//         }else {
+// alert('hace frio, abrigate')
+//         }
+//         console.log(main.temp)
+//     }
     function showWeather(data){
-        const {name, main:{humidity},weather:[array],wind}= data;
+        const {name, main:{humidity,pressure,feels_like},weather:[array],wind}= data;
         console.log(data)
         let temp= Math.round(data.main.temp)
         let temp_min=Math.round(data.main.temp_min)
@@ -87,29 +103,56 @@
         <p> Humedad</p>
         <p>${humidity} %</p>`
 
+      const detailPres=document.createElement('div')
+      detailPres.innerHTML=`
+         <p> Presion </p>
+         <p> ${pressure} </p>`
+    
+         
+         const detailSen=document.createElement('div')
+      detailSen.innerHTML=`
+         <p> Sensacion Termica </p>
+         <p> ${feels_like} % </p>`
+    
+
+
+
+        detailPres.style.display='flex'
+        detailPres.style.flexDirection='row'
+        detailPres.style.justifyContent='space-between'
+        detailPres.style.margin='5%'
+
+        detailSen.style.display='flex'
+        detailSen.style.flexDirection='row'
+        detailSen.style.justifyContent='space-between'
+        detailSen.style.margin='5%'
+
         detailWind.style.display='flex'
         detailWind.style.flexDirection='row'
         detailWind.style.justifyContent='space-between'
         detailWind.style.margin='5%'
+
         detailHum.style.display='flex'
         detailHum.style.flexDirection='row'
         detailHum.style.justifyContent='space-between'
         detailHum.style.margin='5%'
 
+      presion.appendChild(detailPres)
+    //   sensacion.appendChild(detailSen)
       humedad.appendChild(detailHum) 
       viento.appendChild(detailWind)   
       result.appendChild(content)
        
     }
 
-    function bgTemp(){
-        if ( temp >= 15 ){
-        alert("hace calor")
-        }
-    }
-    form.addEventListener('submit',(e)=>{
-       bgTemp()
-    })
+    // function bgTemp(temp){
+    //     if ( temp === 36 ){
+    //     alert("hace calor")
+    //     }
+    // }
+    // form.addEventListener('submit',(e)=>{
+    //    bgTemp()
+    // })
 
 
     function showError(message){
