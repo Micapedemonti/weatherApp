@@ -102,6 +102,16 @@
        
     }
 
+    function bgTemp(){
+        if ( temp >= 15 ){
+        alert("hace calor")
+        }
+    }
+    form.addEventListener('submit',(e)=>{
+       bgTemp()
+    })
+
+
     function showError(message){
         const alert=document.createElement('p');
         alert.classList.add('alert-message');
@@ -113,48 +123,4 @@
         },3000);
     }
    
-
-    // function onSubmit(event){
-    //     event.preventDefault();
-    //     alert('apretaste enter')
-    // }
-    // location.addEventListener('submit',onSubmit,true);
-
-    // if(navigator.geolocation){
-    //       navigator.geolocation.getCurrentPosition( posicion => {
-    //        lon=posicion.coords.longitude
-    //        lat=posicion.coords.latitude
-    
-    //         // ubicacion por ciudad
-    //        const url =`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=be454d68474e61c070edc0083e4b91a0&units=metric`
-
-    //     //    ubicacion actual
-    //     //    const url= `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=be454d68474e61c070edc0083e4b91a0`
-    //        console.log(url)
-    //    fetch(url)
-    //    .then(response => {return response.json()
-    //    .then( data =>{
-    //     console.log(data)
-    //     let loc=(data.name)
-    //     location.textContent= loc
-
-    //     let temp= Math.round(data.main.temp)
-    //     temperatura.textContent=`${temp}°C`
-
-    //     let wind= (data.wind.speed)
-    //     viento.textContent=`${wind} m/s`
-
-    //     let hum=(data.main.humidity)
-    //     humedad.textContent=`${hum} %`
-    //    }) 
-    //    .catch( error =>{
-    //     console.log(error)
-    //    })
-    
-    // })
-
-    //       });
-          
-    // }
-
 
