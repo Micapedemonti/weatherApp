@@ -1,15 +1,15 @@
 // window.addEventListener('load', ()=> {
 //     let lon
 //     let lat
+    let viento=document.querySelector('.viento')
+    let humedad=document.querySelector('.humedad')
     let infoClima=document.querySelector('.infoClima')
     let detalle=document.querySelector('.detallesClima')
     let result= document.querySelector('.result')
     const form = document.querySelector('.info-location')
     let ubicacion= document.getElementById('city')
     let temperatura= document.getElementById('temperatura')
-    let viento= document.getElementById('viento')
-    let lluvia= document.getElementById('lluvia')
-    let humedad=document.getElementById('humedad')
+
 
 
     // })    
@@ -64,8 +64,9 @@
 
         info.style.display='flex'
         info.style.width='100%'
-        info.style.justifyContent='space-evenly'
+        info.style.justifyContent='center'
         info.style.color='white'
+        info.style.gap='5%'
 
         content.style.display='flex'
         content.style.flexDirection='row'
@@ -75,15 +76,32 @@
         content.style.gap='5%'
         content.style.height='120px'
 
-        const detail=document.createElement('div');
-        detail.innerHTML=`
-        <p> Viento ${wind.speed} m/s</p>
-        <p> Humedad ${humidity}</p>`
-    
-    detalle.appendChild(detail)   
-    result.appendChild(content)
+        const detailWind=document.createElement('div');
+        detailWind.innerHTML=`
+        <p> Viento </p>
+        <p> ${wind.speed} m/s`
+
+      const detailHum=document.createElement('div');
+        detailHum.innerHTML=`
+
+        <p> Humedad</p>
+        <p>${humidity} %</p>`
+
+        detailWind.style.display='flex'
+        detailWind.style.flexDirection='row'
+        detailWind.style.justifyContent='space-between'
+        detailWind.style.margin='5%'
+        detailHum.style.display='flex'
+        detailHum.style.flexDirection='row'
+        detailHum.style.justifyContent='space-between'
+        detailHum.style.margin='5%'
+
+      humedad.appendChild(detailHum) 
+      viento.appendChild(detailWind)   
+      result.appendChild(content)
        
     }
+
     function showError(message){
         const alert=document.createElement('p');
         alert.classList.add('alert-message');

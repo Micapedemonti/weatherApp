@@ -45,10 +45,11 @@ main{
     width: 100%;
     flex-direction: row;
     height: 10%;
-    border-bottom-style: inset;
+    border-bottom: 1px solid white;
     justify-content: center;
     margin-right: 5%;
     margin-left: 5%;
+    width: 80%;
     
 }
 .location h2{
@@ -135,6 +136,10 @@ main{
     background-color: transparent;
     margin-top: 5%;
     border: none;
+    color: white;
+}
+.inp-city:hover{
+    border: none;
 }
 .inp-icon{
     background-color: transparent;
@@ -149,6 +154,9 @@ main{
 .detallesClima{
     height: 40%;
     color: white;
+    margin: 5%;
+    font-family:'Roboto', sans-serif;
+    width: 90%;
 }
 .containeruno{
     width: 100%;
@@ -164,4 +172,27 @@ main{
     display: flex;
     width: 100%;
     font-family: 'Roboto', sans-serif
+}
+
+/* mediasquerys*/
+@media only screen and (max-width:1500px){
+
+}
+@media only screen and (max-width: 990px) {
+}
+@media only screen and (max-width:663px){
+.caja-Uno{
+    flex-direction: column;
+}
+.caja-resul{
+    width: 100%;
+    height: 50%;
+}
+.info-location{
+    height: 15%;
+}
+.containeruno{
+    height: 50%;
+
+}
 }
