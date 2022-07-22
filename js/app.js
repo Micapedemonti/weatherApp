@@ -1,8 +1,9 @@
 // window.addEventListener('load', ()=> {
 //     let lon
 //     let lat
-    
-   let result= document.querySelector('.result')
+    let infoClima=document.querySelector('.infoClima')
+    let detalle=document.querySelector('.detallesClima')
+    let result= document.querySelector('.result')
     const form = document.querySelector('.info-location')
     let ubicacion= document.getElementById('city')
     let temperatura= document.getElementById('temperatura')
@@ -39,27 +40,47 @@
           })
     }
     function showWeather(data){
-        const {name, main:{temp_min, temp_max,speed},weather:[arr]}= data;
+        const {name, main:{humidity},weather:[array],wind}= data;
         console.log(data)
         let temp= Math.round(data.main.temp)
+        let temp_min=Math.round(data.main.temp_min)
+        let temp_max=Math.round(data.main.temp_max)
     
-        viento.textContent=`${data.wind.speed} m/s`
+       
 
         const content=document.createElement('div');
         content.innerHTML=`
         <h5> ${temp}°</h5>
-        <h2>  ${name}</h2>
-        <img src ="http://openweathermap.org/img/wn/${arr.icon}2x.png" alt="icon">
-        <p>  ${temp_min}</p>
-        <p>  ${temp_max}</p>`
-        // viento.textContent=`${wind.speed} m/s`
+        <h2>  ${name}</h2>`
+ 
+         const info =document.createElement('div');
+         info.innerHTML=`
+      
+        <p> ${array.description}</p>
+        <p> Temp min ${temp_min}°</p>
+        <p> Temp max ${temp_max}°</p>`
+
+        infoClima.appendChild(info)
+
+        info.style.display='flex'
+        info.style.width='100%'
+        info.style.justifyContent='space-evenly'
+        info.style.color='white'
+
         content.style.display='flex'
         content.style.flexDirection='row'
         content.style.justifyContent='center'
         content.style.alignItems='center'
         content.style.width='100%'
         content.style.gap='5%'
+        content.style.height='120px'
 
+        const detail=document.createElement('div');
+        detail.innerHTML=`
+        <p> Viento ${wind.speed} m/s</p>
+        <p> Humedad ${humidity}</p>`
+    
+    detalle.appendChild(detail)   
     result.appendChild(content)
        
     }

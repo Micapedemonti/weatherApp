@@ -41,7 +41,7 @@ main{
 }
 .info-location{
     display: flex;
-    align-items: baseline;
+    align-items: center;
     width: 100%;
     flex-direction: row;
     height: 10%;
@@ -49,6 +49,7 @@ main{
     justify-content: center;
     margin-right: 5%;
     margin-left: 5%;
+    
 }
 .location h2{
     color: white;
@@ -106,21 +107,28 @@ main{
 .result h5{
     color: white;
     font-size: 5em;
+    font-family:'Roboto', sans-serif;
 
 }
 .result h2{
     color: white;
     font-size: 3em;  
+    font-family:'Roboto', sans-serif;
 }
 .result p{
     color: white;
     font-size: 2em;  
+    font-family:'Roboto', sans-serif;
 }
 .caja-resul{
     height: 100%;
     background-color: black;
     opacity: 40%;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .inp-city{
@@ -136,4 +144,24 @@ main{
     height: 100%;
     background-repeat: no-repeat;
     color: transparent;
+    background-size: 25px
+}
+.detallesClima{
+    height: 40%;
+    color: white;
+}
+.containeruno{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 5%;
+    align-content: center;
+    margin-bottom: 10%;
+}
+.infoClima{
+    display: flex;
+    width: 100%;
+    font-family: 'Roboto', sans-serif
 }
