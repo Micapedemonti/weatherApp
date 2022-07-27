@@ -9,6 +9,9 @@ main{
 .container{
     height: 100%;
     margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .caja-Uno{
     background-image: url(../img/nubes.jpeg);
@@ -19,7 +22,30 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 100%;
+    width: 80%;
+    animation: change 20s infinite ease-in-out;
+}
+@keyframes change{
+   0%
+    {
+        background-image: url(../img/598110.jpg);
+    }
+    20%
+    {
+        background-image: url(../img/wallpaperflare.com_wallpaper.jpg);
+    }
+    40%
+    {
+        background-image: url(../img/wallpaperflare.com_wallpaper\ \(1\).jpg);
+    }
+    60%
+    {
+        background-image: url(../img/wallpaperflare.com_wallpaper\ \(2\).jpg);
+    }
+    80%
+    {
+        background-image: url(../img/wallpaperflare.com_wallpaper\ \(3\).jpg);
+    }
 }
 .data-clima{
     width: 50%;
@@ -173,9 +199,9 @@ main{
     width: 100%;
     font-family: 'Roboto', sans-serif
 }
-footer{
+/* footer{
     background-color: black;
-}
+} */
 /* mediasquerys*/
 @media only screen and (max-width:1500px){
 

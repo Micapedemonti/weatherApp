@@ -1,6 +1,8 @@
 // window.addEventListener('load', ()=> {
 //     let lon
 //     let lat
+   let temp_min
+   let temp_max
     let presion=document.querySelector('.presAtm')
     let sensacion=document.querySelector('.senTermica')
     let viento=document.querySelector('.viento')
@@ -46,15 +48,6 @@
           })
     }
 
-//     function bgTemp(tem){
-//         const {main:{temp}}=tem
-//         if ( temp  > "4" ){
-//         alert("hace calor")
-//         }else {
-// alert('hace frio, abrigate')
-//         }
-//         console.log(main.temp)
-//     }
     function showWeather(data){
         const {name, main:{humidity,pressure,feels_like},weather:[array],wind}= data;
         console.log(data)
@@ -145,15 +138,7 @@
        
     }
 
-    // function bgTemp(temp){
-    //     if ( temp === 36 ){
-    //     alert("hace calor")
-    //     }
-    // }
-    // form.addEventListener('submit',(e)=>{
-    //    bgTemp()
-    // })
-
+  
 
     function showError(message){
         const alert=document.createElement('p');
