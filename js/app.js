@@ -76,6 +76,7 @@
         info.style.justifyContent='center'
         info.style.color='white'
         info.style.gap='5%'
+        info.style.fontSize= 'x-large';
 
         content.style.display='flex'
         content.style.flexDirection='row'
