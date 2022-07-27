@@ -152,3 +152,17 @@
     }
    
 
+
+let date = new Date();
+let output = String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0') + '/' + date.getFullYear();
+console.log(output);
+
+
+let displayHours = document.getElementById('displayHours');
+     let displayMinutes = document.getElementById('displayMinutes');
+
+      let currentTime = new Date();
+
+      displayHours.innerHTML = currentTime.getHours() + " :";
+      displayMinutes.innerHTML = currentTime.getMinutes() + "hrs";
+          

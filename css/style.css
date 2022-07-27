@@ -5,15 +5,22 @@ body{
 }
 main{
     height: 100%;
-}
-.container{
-    height: 100%;
-    margin-top: 5%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
-.caja-Uno{
+.container{
+    margin-top: 5%;
+    background-image: url(../img/nubes.jpeg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction:row-reverse;
+    width: 80%;
+    animation: change 20s infinite ease-in-out;
+}
+/* .caja-Uno{
     background-image: url(../img/nubes.jpeg);
     height: 100%;
     background-repeat: no-repeat;
@@ -24,6 +31,12 @@ main{
     align-items: flex-end;
     width: 80%;
     animation: change 20s infinite ease-in-out;
+} */
+.caja-Uno{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: row-reverse;
 }
 @keyframes change{
    0%
@@ -70,7 +83,7 @@ main{
     align-items: center;
     width: 100%;
     flex-direction: row;
-    height: 10%;
+    height: 15%;
     border-bottom: 1px solid white;
     justify-content: center;
     margin-right: 5%;
@@ -151,11 +164,18 @@ main{
     height: 100%;
     background-color: black;
     opacity: 40%;
-    width: 50%;
+    width:100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+}
+.caja{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .inp-city{
@@ -163,6 +183,7 @@ main{
     margin-top: 5%;
     border: none;
     color: white;
+    text-align: center;
 }
 .inp-city:hover{
     border: none;
@@ -175,7 +196,8 @@ main{
     height: 100%;
     background-repeat: no-repeat;
     color: transparent;
-    background-size: 25px
+    background-size: 50px;
+    background-position: center;
 }
 .detallesClima{
     height: 40%;
@@ -194,6 +216,15 @@ main{
     align-content: center;
     margin-bottom: 10%;
 }
+.containerDos{
+    width: 100%;
+        display: flex;
+    color: white;
+    font-family:'Roboto', sans-serif;
+    font-size: 2em;
+    margin: 5%;
+
+}
 .infoClima{
     display: flex;
     width: 100%;
@@ -211,10 +242,14 @@ main{
 @media only screen and (max-width:663px){
 .caja-Uno{
     flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 .caja-resul{
     width: 100%;
-    height: 50%;
+}
+.container{
+    flex-direction: column-reverse;
 }
 .info-location{
     height: 15%;
@@ -222,5 +257,8 @@ main{
 .containeruno{
     height: 50%;
 
+}
+.caja{
+    width: 100%;
 }
 }
