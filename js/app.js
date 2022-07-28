@@ -13,24 +13,34 @@
     const form = document.querySelector('.info-location')
     let ubicacion= document.getElementById('city')
     let temperatura= document.getElementById('temperatura')
+    let alerta=document.getElementById('alertMes')
 
 
 
     // })    
-    
-    
+    function noIngreso(){
+      ubicacion.classList.add("noOk");
+      ubicacion.classList.remove("ok");
+  }
+  
+  function ingreso (){
+      ubicacion.classList.remove("noOk");
+      ubicacion.classList.add("ok"); 
+  }
+
     form.addEventListener('submit',(e)=>{
         e.preventDefault()
         if (ubicacion.value === ''){
+          noIngreso()
             showError('Por favor ingresa una Ciudad')
             return;
         }
 
         llamarApi(ubicacion.value);
     })
-    form.addEventListener('submit',(e)=>{
-       bgTemp()
-    })
+    function estiloInput(){
+      ubicacion.stylo.border='none'
+    }
     function llamarApi(city){
         // const apiKey= "be454d68474e61c070edc0083e4b91a0"
         const url =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=be454d68474e61c070edc0083e4b91a0&units=metric`
@@ -146,10 +156,10 @@
         alert.classList.add('alert-message');
         alert.innerHTML=message;
 
-        form.appendChild(alert);
+        alerta.appendChild(alert);
         setTimeout(() => {
             alert.remove();
-        },3000);
+        },30000);
     }
    
 
@@ -167,3 +177,5 @@ let displayHours = document.getElementById('displayHours');
       displayHours.innerHTML = currentTime.getHours() + " :";
       displayMinutes.innerHTML = currentTime.getMinutes() + "hrs";
           
+
+   

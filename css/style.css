@@ -185,8 +185,8 @@ main{
     color: white;
     text-align: center;
 }
-.inp-city:hover{
-    border: none;
+.inp-city:focus{
+    border-bottom: 2px white;
 }
 .inp-icon{
     background-color: transparent;
@@ -231,10 +231,7 @@ main{
     width: 100%;
     font-family: 'Roboto', sans-serif
 }
-/* footer{
-    background-color: black;
-} */
-/* mediasquerys*/
+
 @media only screen and (max-width:1500px){
 
 }
@@ -262,4 +259,22 @@ main{
 .caja{
     width: 100%;
 }
+}
+
+.ok{
+    border: none;
+}
+.noOk{
+
+    border-bottom: red 1.5px solid;
+
+}
+input:focus{
+  outline:none;
+}
+.alert-message{
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family:'Roboto', sans-serif;
 }
