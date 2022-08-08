@@ -46,7 +46,7 @@ let temp_max
   e.preventDefault()
   if (ubicacion.value === ''){
     noIngreso()
-    otraCiudad()
+
       showError('Por favor ingresa una Ciudad')
       return;
   }
@@ -179,3 +179,6 @@ function ingreso (){
      },5000);
  }
 
+function searchOther(){
+form.reset()
+}

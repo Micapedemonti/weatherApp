@@ -246,9 +246,11 @@ main{
     width: 100%;
     font-family: 'Roboto', sans-serif
 }
+
 .clickBtn{
     display:none;
 }
+
 
 @media only screen and (max-width:1500px){
 
@@ -306,6 +308,7 @@ input:focus{
     font-size: 1.3em;
     font-weight: bold;
     font-family:'Roboto', sans-serif;
+
 }
 input {
     background-color: transparent;
