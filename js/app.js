@@ -14,7 +14,7 @@ let temp_max
  let ubicacion= document.getElementById('city')
  let temperatura= document.getElementById('temperatura')
  let alerta=document.getElementById('alertMes')
- let btn= document.getElementById('btnCity')
+ let botonCity= document.querySelector('.containerBtn')
 
 
 
@@ -41,7 +41,7 @@ let temp_max
          }
        })
  }
- 
+
  form.addEventListener('submit',(e)=>{
   e.preventDefault()
   if (ubicacion.value === ''){
@@ -64,7 +64,6 @@ function otraCiudad(){
 }
 
 
-
 function noIngreso(){
   ubicacion.classList.add("noOk");
   ubicacion.classList.remove("ok");
@@ -83,7 +82,6 @@ function ingreso (){
      let temp_min=Math.round(data.main.temp_min)
      let temp_max=Math.round(data.main.temp_max)
  
-    
 
      const content=document.createElement('div');
      content.innerHTML=`
@@ -180,5 +178,6 @@ function ingreso (){
  }
 
 function searchOther(){
-form.reset()
+window.location.reload()
+botonCity.classList.add=('btnCity')
 }
