@@ -2,23 +2,30 @@ body{
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 0.3fr;
+    align-items: center;
 }
+
 main{
     height: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 5%;
 }
 .container{
     margin-top: 5%;
-    background-image: url(../img/nubes.jpeg);
-    height: 100%;
+    background-image: url(../img/pexels-michał-osiński-3454270.jpg);
+    overflow: hidden;
+    position: relative;
+    /* height: 100%; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction:row-reverse;
     width: 80%;
-    animation: change 20s infinite ease-in-out;
+    animation: change 17s infinite ease-in-out;
+    animation-delay: 3s;
+   
 }
 /* .caja-Uno{
     background-image: url(../img/nubes.jpeg);
@@ -38,10 +45,11 @@ main{
     display: flex;
     flex-direction: row-reverse;
 }
+
 @keyframes change{
    0%
     {
-        background-image: url(../img/598110.jpg);
+        background-image: url(../img/pexels-michał-osiński-3454270.jpg);
     }
     20%
     {
@@ -58,6 +66,10 @@ main{
     80%
     {
         background-image: url(../img/wallpaperflare.com_wallpaper\ \(3\).jpg);
+    }
+    100%
+    {
+        background-image: url(../img/pexels-michał-osiński-3454270.jpg);
     }
 }
 .data-clima{
@@ -163,7 +175,7 @@ main{
 .caja-resul{
     height: 100%;
     background-color: black;
-    opacity: 40%;
+    opacity: 60%;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -184,9 +196,10 @@ main{
     border: none;
     color: white;
     text-align: center;
+    font-size: 1.5em;
 }
-.inp-city:hover{
-    border: none;
+.inp-city:focus{
+    border-bottom: 2px white;
 }
 .inp-icon{
     background-color: transparent;
@@ -205,6 +218,8 @@ main{
     margin: 5%;
     font-family:'Roboto', sans-serif;
     width: 90%;
+    font-weight: bold;
+    font-size: 1.3em;
 }
 .containeruno{
     width: 100%;
@@ -231,14 +246,23 @@ main{
     width: 100%;
     font-family: 'Roboto', sans-serif
 }
-/* footer{
-    background-color: black;
-} */
-/* mediasquerys*/
+.clickBtn{
+    display:none;
+}
+
 @media only screen and (max-width:1500px){
 
 }
 @media only screen and (max-width: 990px) {
+.result h5 {
+        font-size: 4em;
+}
+.info-clima p{
+font-size: larger;
+}
+.info-location{
+    width: 100%;
+}
 }
 @media only screen and (max-width:663px){
 .caja-Uno{
@@ -262,4 +286,35 @@ main{
 .caja{
     width: 100%;
 }
+}
+
+.ok{
+    border: none;
+
+}
+.noOk{
+    border-bottom: red 1.5px solid;
+
+
+}
+input:focus{
+  outline:none;
+  background-color: transparent;
+}
+.alert-message{
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family:'Roboto', sans-serif;
+}
+input {
+    background-color: transparent;
+}
+footer{
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
