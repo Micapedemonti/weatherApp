@@ -14,7 +14,7 @@ let temp_max
  let ubicacion= document.getElementById('city')
  let temperatura= document.getElementById('temperatura')
  let alerta=document.getElementById('alertMes')
- let botonCity= document.querySelector('.containerBtn')
+ const botonCity= document.querySelector('.containerBtn')
 
 
 
@@ -50,7 +50,7 @@ let temp_max
       showError('Por favor ingresa una Ciudad')
       return;
   }
-
+  botonCity.style.display=
   llamarApi(ubicacion.value);
   form.style.display='none';
 })
