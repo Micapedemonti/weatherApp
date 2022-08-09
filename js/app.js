@@ -104,6 +104,7 @@ function ingreso (){
      info.style.gap='5%'
      info.style.fontSize= '1em';
      info.style.fontWeight='bolder';
+     info.style.margin='5%'
 
      content.style.display='flex'
      content.style.flexDirection='row'

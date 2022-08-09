@@ -21,7 +21,7 @@ main{
     /* background-position: center; */
     display: flex;
     flex-direction:row-reverse;
-    width: 90%;
+    width: 80%;
     animation: change 17s infinite ease-in-out;
     animation-delay: 3s;
    
@@ -252,8 +252,13 @@ footer{
     gap: 20px;
 }
 
-
-
+.iconify{
+    color: black;
+}
+.iconify:hover{
+    width: 40px;
+    height: 40px;
+}
 @media only screen and (max-width:1500px){
 
 }
@@ -273,6 +278,14 @@ font-size: larger;
 }
 
 @media only screen and (max-width:663px){
+body{
+ height: 100vh; 
+display: flex;
+ flex-direction: column;
+}
+main{
+    width: 100%;
+}
 .caja-Uno{
     flex-direction: column;
     height: 100%;
@@ -316,16 +329,12 @@ input:focus{
 input {
     background-color: transparent;
 }
-/* footer{
-    display: flex;
-    height: 150px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-} */
 .button#newCity {
     width: 50%;
+}
+#newCity:hover {
+    width: 60%;
+    background-color: lightyellow;
 }
 .result h5 {
     font-size: 3em;
