@@ -283,6 +283,7 @@ font-size: larger;
 }
 .container{
     flex-direction: column-reverse;
+    width: 100%;
 }
 .info-location{
     height: 30%;
