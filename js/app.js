@@ -102,7 +102,8 @@ function ingreso (){
      info.style.justifyContent='center'
      info.style.color='white'
      info.style.gap='5%'
-     info.style.fontSize= 'x-large';
+     info.style.fontSize= '1em';
+     info.style.fontWeight='bolder';
 
      content.style.display='flex'
      content.style.flexDirection='row'
