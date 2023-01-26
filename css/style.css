@@ -167,6 +167,7 @@ main{
     border: none;
     color: white;
     text-align: center;
+    outline: none;
 }
 .inp-city:focus{
     border-bottom: 2px white;
@@ -211,6 +212,9 @@ main{
     font-size: 15px;
     text-align: center;
     color: #fff;
+}
+.alertMes{
+    width: 100%;
 }
 @keyframes containerDos {
 	0% {
@@ -257,8 +261,7 @@ footer{
     color: black;
 }
 .iconify:hover{
-    width: 40px;
-    height: 40px;
+  transform: scale(1.1);
 }
 @media only screen and (max-width:1500px){
 
@@ -273,9 +276,7 @@ font-size: larger;
 .info-location{
     width: 100%;
 }
-.inp-city{
-    width: 100%;
-}
+
 }
 
 @media only screen and (max-width:663px){

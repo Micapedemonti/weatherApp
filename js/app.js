@@ -18,12 +18,9 @@ let temp_max
 
 
 
- // })    
-
-
-//  function resetear() {
-//   form.getElementById("submit").reset();
-// }
+ const FECHA = new Date ()
+ fecha.innerHTML = FECHA.toLocaleDateString('es-MX',{weekday: 'long', month: 'short', day:'numeric'})
+ 
 
  function llamarApi(city){
      // const apiKey= "be454d68474e61c070edc0083e4b91a0"
@@ -172,6 +169,9 @@ function ingreso (){
      const alert=document.createElement('p');
      alert.classList.add('alert-message');
      alert.innerHTML=message;
+
+     alert.style.color='white'
+     alert.style.textAlign='center'
 
      alerta.appendChild(alert);
      setTimeout(() => {
